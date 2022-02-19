@@ -72,3 +72,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
 });
+
+console.log(
+  'https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648427#content'
+);
