@@ -19,6 +19,9 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // Score
 let score = 20;
 
+// highscore
+let highscore = 0;
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
@@ -34,6 +37,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
+
+    // check if current score is higher then highscore
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
 
     // When player guess too high
   } else if (guess > secretNumber) {
@@ -72,7 +81,3 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
 });
-
-console.log(
-  'https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648427#content'
-);
